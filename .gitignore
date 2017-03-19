@@ -1,2 +1,8 @@
-.sublime-project
-.sublime-workspace
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+
+/wordpress/wp-content/themes/*
+!/wordpress/wp-content/themes/qedit
+
+!/wordpress/wp-conent/plugins/akismet/*
