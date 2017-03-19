@@ -105,7 +105,11 @@ add_action( 'widgets_init', 'qedit_widgets_init' );
  * Enqueue scripts and styles.
  */
 function qedit_scripts() {
-	wp_enqueue_style( 'qedit-style', get_stylesheet_uri() );
+	//Uncomment when going to production
+	//wp_enqueue_style( 'qedit-style', get_stylesheet_uri() );
+
+
+	wp_enqueue_style( 'qedit-style', get_template_directory_uri() . '/css/style.css' );
 
 	wp_enqueue_script( 'qedit-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

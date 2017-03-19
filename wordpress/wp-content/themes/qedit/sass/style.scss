@@ -43,12 +43,18 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
-@import "mixins/mixins-master";
+@import "mixins/mixins-master"; 
 
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 @import "normalize";
+
+/*--------------------------------------------------------------
+# Bootstrap
+--------------------------------------------------------------*/
+// body {text-color:green;}
+@import "vendor/bootstrap/bootstrap";
 
 /*--------------------------------------------------------------
 # Typography
@@ -104,3 +110,5 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+
+
