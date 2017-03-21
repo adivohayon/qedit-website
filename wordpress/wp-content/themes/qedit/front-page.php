@@ -30,10 +30,8 @@ get_header();
 						<?php masterslider(1); ?>
 					</div>
 				</div>
-				<div id="demo" class="padded">
-					<button class="primary">
-						Schedule a Demo
-					</button>
+				<div id="contact-us" class="padded">
+					Contact Us
 				</div>
 			</main><!-- #main -->
 		</div><!-- #primary -->
