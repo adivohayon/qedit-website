@@ -6427,6 +6427,8 @@ a {
 
 .site-main {
   margin: 0 0 0 37rem; }
+  .site-main .padded {
+    padding: 0 5.4rem; }
 
 .site-content .widget-area {
   float: left;

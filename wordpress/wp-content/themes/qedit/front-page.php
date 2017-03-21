@@ -19,20 +19,22 @@ get_header();
 		<?php get_sidebar(); ?>
 		<div id="primary" class="content-area col-sm-12">
 			<main id="main" class="site-main" role="main">
-
-				<?php
-				while ( have_posts() ) : the_post();
-
-					get_template_part( 'template-parts/content', 'page' );
-
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-
-				endwhile; // End of the loop.
-				?>
-
+				<div id="home">
+					<div class="slider-container">
+						<?php masterslider(1); ?>
+					</div>
+				</div>
+				<div id="technology">
+					<h2 class="padded">Our Technology</h2>
+					<div class="slider-container">
+						<?php masterslider(1); ?>
+					</div>
+				</div>
+				<div id="demo" class="padded">
+					<button class="primary">
+						Schedule a Demo
+					</button>
+				</div>
 			</main><!-- #main -->
 		</div><!-- #primary -->
 	</div><!-- .row -->
