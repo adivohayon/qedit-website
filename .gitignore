@@ -5,4 +5,5 @@
 /wordpress/wp-content/themes/*
 !/wordpress/wp-content/themes/qedit
 
-!/wordpress/wp-conent/plugins/akismet/*
+!/wordpress/wp-content/plugins/akismet/*
+!/wordpress/wp-conent/themes/qedit/css/style.css.map
