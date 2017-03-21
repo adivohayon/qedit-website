@@ -24,7 +24,7 @@ get_header();
 						<?php masterslider(1); ?>
 					</div>
 				</div>
-				<div id="technology">
+				<div id="prover">
 					<h2 class="padded">Our Technology</h2>
 					<div class="slider-container">
 						<?php masterslider(1); ?>

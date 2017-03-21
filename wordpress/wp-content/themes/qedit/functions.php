@@ -121,6 +121,7 @@ function qedit_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'qedit_scripts' );
 
+
 /**
  * Implement the Custom Header feature.
  */

@@ -14,7 +14,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 
 <aside id="sidebar"  role="complementary">
 
-
 	<div id="logo">
 		<img src="<?php echo get_template_directory_uri(); ?>/images/qedit-logo.png" alt="Qedit Logo">	
 	</div>
