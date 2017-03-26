@@ -1,9 +1,24 @@
-*.sublime-project
-*.sublime-workspace
+# File system junk files
+Desktop.ini
+Thumbs.db
 .DS_Store
+._*
+.Spotlight-V100
+.Trashes
+.apdisk
+.fseventsd
+
+# Editor files
+*.sublime-*
+*.swp
+.c9
+.sass-cache/
+
+/node_modules
 
 /wordpress/wp-content/themes/*
 !/wordpress/wp-content/themes/qedit
 
-/wordpress/wp-content/plugins/akismet
+/wordpress/wp-content/uploads
+/wordpress/wp-content/plugins/*
 /wordpress/wp-content/themes/qedit/css/style.css.map

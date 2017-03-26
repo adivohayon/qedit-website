@@ -3,15 +3,20 @@
 ## Getting Started
 1. Install Docker v17+ (and Docker-Compose v1.1+)
 2. Clone repository
-3. Set file premissions if necessary `sudo chmod -R 777 wordpress`
-4. run 	`docker-compose up`
-5. 
+3. Set file premissions if necessary  
+`sudo chmod -R 777 wordpress/wp-content/uploads`  
+`sudo chmod -R 777 data`
+4. run `docker-compose up`
 
 
 ## Backup & Restore DB
+SQL File: `data/db.sql`  
 ### Backup
-`docker exec mysql /usr/bin/mysqldump -u wordpress --password=wordpress wordpress > backups/db.sql`
+`npm run db:backup`
 
 
 ### Restore
-`cat backups/db.sql | docker exec -i mysql /usr/bin/mysql -u wordpress --password=wordpress wordpress`
+`npm run db:restore`  
+* Backup file should be restored upon container start  
+
+

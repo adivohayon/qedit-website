@@ -1,43 +1,40 @@
 version: '2'
-
 services:
-  db:
-    image: mysql:5.7
-    container_name: mysql
-    volumes:
-      - db_data:/var/lib/mysql
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: wordpress
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress
-
   wordpress:
-    image: wordpress:latest
-    container_name: wordpress
-    depends_on:
-      - db
+    container_name: server
+    image: visiblevc/wordpress:latest
     ports:
-      - "8000:80"
-    working_dir: /var/www/html
+      - 8080:80
+      - 443:443
     volumes:
-      - ./wordpress/wp-content/:/var/www/html/wp-content
-    restart: always
+      - ./data:/data
+      - ./wordpress/wp-content/themes/qedit:/app/wp-content/themes/qedit #theme
+      - ./wordpress/wp-content/plugins:/app/wp-content/plugins #Plugins
+      - ./wordpress/wp-content/uploads:/app/wp-content/uploads #Uploads
     environment:
-      WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_PASSWORD: wordpress
-  
+      THEMES: >-
+        [local]qedit
+      PLUGINS: >-
+        [local]advanced-custom-fields,
+        [local]custom-post-type-ui,
+        [local]masterslider,
+        [local]page-scroll-to-id
+      DB_NAME: qedit
+      DB_PASS: root
+      ADMIN_EMAIL: admin@qedit.com
+  db:
+    container_name: db
+    image: mariadb:10 # or mysql:5.7
+    volumes:
+      - data_volume:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin
     container_name: phpmyadmin
-    depends_on:
-      - db
-    ports:
-      - 8181:80
+    image: phpmyadmin/phpmyadmin
     environment:
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress
-      MYSQL_ROOT_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 22222:80
 volumes:
-  db_data:
+  data_volume:
