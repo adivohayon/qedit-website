@@ -21,7 +21,7 @@
 
 			
 
-			<div id="about-us" class="padded">
+			<div id="about-us">
 				<?php
 				while ( have_posts() ) : the_post();
 
@@ -30,7 +30,8 @@
 				endwhile; // End of the loop.
 				?>
 			</div>
-			<div id="team" class="padded">
+			<div id="team">
+				<h2>OUR TEAM</h2>
 				<?php 
 					$query = new WP_Query(array(
 					    'post_type' => 'team',
@@ -46,12 +47,10 @@
 					    $team_member_image = wp_get_attachment_image($post_id);
 
 				?>
-				    
-
-						Name: <?php echo $team_member_name; ?> <br />
-						Role: <?php echo $team_member_role; ?> <br />
-						Text: <?php echo $team_member_text; ?> <br />
-						Image: <?php echo $team_member_image; ?> <br />
+				    	<div class="team-member-image">Image: <?php echo $team_member_image; ?></div>
+						<h3><?php echo $team_member_name; ?></h3>
+						<h4/><?php echo $team_member_role; ?></h4>
+						<div class="team-member-text"><?php echo $team_member_text; ?></div>
 						
 						<?php if (has_post_thumbnail( $query->ID ) ): ?>
 						  <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $query->ID ), 'single-post-thumbnail' ); ?>
