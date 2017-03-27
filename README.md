@@ -22,3 +22,5 @@ SQL File: `data/db.sql`
 * Backup file should be restored upon container start  
 
 
+Ignore File permission changes:  
+`git config core.filemode false`
