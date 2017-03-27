@@ -30,14 +30,16 @@
 				endwhile; // End of the loop.
 				?>
 			</div>
-			<div id="team">
+			<div id="team" class="padded">
 				<h2>OUR TEAM</h2>
+
 				<?php 
 					$query = new WP_Query(array(
 					    'post_type' => 'team',
 					    'posts_per_page' => -1,
 					    'post_status' => 'publish'
-					));           
+					));
+					$counter = 0;           
 					while ($query->have_posts()) :
 					    $query->the_post();
 					    $team_member_name = get_the_title();
@@ -46,23 +48,32 @@
 					    $post_id = get_the_ID();
 					    $team_member_image = wp_get_attachment_image($post_id);
 
-				?>
-				    	<div class="team-member-image">Image: <?php echo $team_member_image; ?></div>
-						<h3><?php echo $team_member_name; ?></h3>
-						<h4/><?php echo $team_member_role; ?></h4>
-						<div class="team-member-text"><?php echo $team_member_text; ?></div>
-						
-						<?php if (has_post_thumbnail( $query->ID ) ): ?>
-						  <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $query->ID ), 'single-post-thumbnail' ); ?>
-						  <div id="custom-bg" style="background-image: url('<?php echo $image[0]; ?>')">
+					    if ($counter % 3 === 0) echo '<div class="row">';
 
-						  </div>
-						<?php endif; ?>
+				?>
+					
+						<div class="team-member col-sm-4">
+							<?php 
+								if (has_post_thumbnail( $query->ID ) ):
+							  		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $query->ID ), 'single-post-thumbnail' ); 
+							?>
+									<img src="<?php echo $image[0]; ?>" alt="<?php echo $team_member_name; ?>" class="circle">
+								<?php endif; ?>
+							<h3><?php echo $team_member_name; ?></h3>
+							<h4/><?php echo $team_member_role; ?></h4>
+							<p class="description"><?php echo $team_member_text; ?></p>
+						</div>
+					
+						
 				
 				<?php 
+					$counter++;
+					if ($counter % 3 === 0) echo '</div>';
 					endwhile;
 					wp_reset_query();
 				?>
+
+				<!-- /.row -->
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
