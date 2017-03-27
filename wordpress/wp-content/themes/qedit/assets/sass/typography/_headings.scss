@@ -1,3 +1,6 @@
+html, body {
+	font-size: 12px;
+}
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	font-family: 'Open Sans';
@@ -5,7 +8,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	color: white;
     font-size: 2.4rem;
     // padding: 2.42rem 0 2.42rem 3.6rem;
 }
