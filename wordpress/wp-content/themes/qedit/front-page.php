@@ -25,7 +25,12 @@ get_header();
 				==================================-->
 				<div id="home">
 					<div class="slider-container">
-						<?php masterslider(1); ?>
+						<video autoplay loop class="background-video"> 
+						   <source src="<?php echo get_template_directory_uri(); ?>/assets/videos/audit-trail.mp4" type="video/mp4" > 
+						</video>
+						<div class="overlay"></div>
+						
+						<?php masterslider('audit-trail'); ?>
 					</div>
 				</div>
 				<!-- /#home -->

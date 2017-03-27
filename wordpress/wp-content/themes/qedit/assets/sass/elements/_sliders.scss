@@ -1,0 +1,33 @@
+.slider-container {
+	height:30rem;
+	overflow:hidden;
+	position:relative;
+	video.background-video {
+		width: 100%;
+		position: absolute;
+	}
+	.overlay {
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0,0,0,0.56);
+		position: relative;
+	}
+
+	.master-slider-parent {
+		top: -30rem;
+	}
+
+	h1 {
+		color:#ffffff;
+		font-size:3.3rem;
+		text-transform:none;
+		margin-bottom:1rem;
+	}
+
+	p {
+		color:#ffffff;
+		font-size:1.4rem;
+		line-height:2.5rem;
+		font-weight:300;
+	}
+}
