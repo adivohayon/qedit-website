@@ -16,6 +16,7 @@ Thumbs.db
 
 /node_modules
 
+
 /wordpress/wp-content/themes/*
 /wordpress/wp-content/themes/qedit/css/style.css.map
 !/wordpress/wp-content/themes/qedit
@@ -23,3 +24,6 @@ Thumbs.db
 /wordpress/wp-content/uploads
 /wordpress/wp-content/plugins/*
 /wordpress/wp-content/themes/qedit/rev-manifest.json
+/data/db.sql
+/wordpress/wp-content/themes/qedit/css/style.css
+/wordpress/wp-content/themes/qedit/dist

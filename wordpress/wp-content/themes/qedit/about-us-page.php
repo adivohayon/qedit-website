@@ -31,7 +31,7 @@
 				?>
 			</div>
 			<div id="team" class="padded">
-				<h2>OUR TEAM</h2>
+				<h2>Our Team</h2>
 
 				<?php 
 					$query = new WP_Query(array(
@@ -51,11 +51,10 @@
 					    if ($counter % 3 === 0) echo '<div class="row">';
 
 				?>
-					
 						<div class="team-member col-sm-4">
 							<?php 
 								if (has_post_thumbnail( $query->ID ) ):
-							  		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $query->ID ), 'single-post-thumbnail' ); 
+							  		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $query->ID ), 'team-member' ); 
 							?>
 									<img src="<?php echo $image[0]; ?>" alt="<?php echo $team_member_name; ?>" class="circle">
 								<?php endif; ?>
@@ -63,9 +62,6 @@
 							<h4/><?php echo $team_member_role; ?></h4>
 							<p class="description"><?php echo $team_member_text; ?></p>
 						</div>
-					
-						
-				
 				<?php 
 					$counter++;
 					if ($counter % 3 === 0) echo '</div>';

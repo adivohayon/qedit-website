@@ -1,4 +1,6 @@
 #team {
+	background-color: #FCFCFC;
+	padding-top: 1rem;
 	.row {
 		margin-top: 2rem;
 	}
@@ -7,6 +9,10 @@
 		img {
 			height: 12.5rem;
 			width: 12.5rem;
+		}
+		p {
+			width: 75%;
+			margin: auto;
 		}
 	}
 }
