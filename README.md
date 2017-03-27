@@ -8,6 +8,8 @@
 `sudo chmod -R 777 data`
 4. run `docker-compose up`
 
+## Enter Server Container
+`npm run ssh:server`
 
 ## Backup & Restore DB
 SQL File: `data/db.sql`  

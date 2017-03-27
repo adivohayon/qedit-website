@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "scripts": {
     "db:backup": "docker exec server /bin/bash -c \"sudo -u www-data wp db export /data/db.sql --allow-root \"",
-    "db:restore": "docker exec server /bin/bash -c  \"wp db import /data/db.sql --allow-root\""
+    "db:restore": "docker exec server /bin/bash -c  \"wp db import /data/db.sql --allow-root\"",
+    "ssh:server": "docker exec -i -t server /bin/bash"
   },
   "dependencies": {},
   "devDependencies": {
