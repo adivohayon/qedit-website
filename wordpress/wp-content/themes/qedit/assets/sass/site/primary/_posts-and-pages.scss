@@ -22,6 +22,16 @@
 	margin: 1.5em 0 0;
 }
 
+article.post {
+	&.light-gray-bg {
+		background-color: #f2f2f2;
+	}
+	h5 {font-size:1.5rem;}
+	padding:2rem;
+	.post-content {
+		padding:1rem;
+	}
+}
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
@@ -43,7 +53,7 @@
 	}
 
 	.image-container {
-		width:40%;
+		width:16rem;
 		float:left;
 	}
 

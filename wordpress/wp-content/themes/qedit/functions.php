@@ -121,6 +121,25 @@ function qedit_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'qedit_scripts' );
 
+/**
+ * Filter the "read more" excerpt string link to the post.
+ *
+ * @param string $more "Read more" excerpt string.
+ * @return string (Maybe) modified "read more" excerpt string.
+ */
+function wpdocs_excerpt_more( $more ) {
+    return sprintf( '<div class="read-more"><a class="read-more" href="%1$s">%2$s</a></div>',
+        get_permalink( get_the_ID() ),
+        __( 'Read More', 'textdomain' )
+    );
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+
+/**
+ * Disable Comments
+*/
+require get_template_directory() . '/inc/remove-comments.php';
 
 /**
  * Implement the Custom Header feature.
