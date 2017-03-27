@@ -9,16 +9,19 @@ services:
     volumes:
       - ./data:/data
       - ./wordpress/wp-content/themes/qedit:/app/wp-content/themes/qedit #theme
-      - ./wordpress/wp-content/plugins:/app/wp-content/plugins #Plugins
+      - ./wordpress/wp-content/plugins/advanced-custom-fields:/app/wp-content/plugins/advanced-custom-fields
+      - ./wordpress/wp-content/plugins/custom-post-type-ui:/app/wp-content/plugins/custom-post-type-ui
+      - ./wordpress/wp-content/plugins/masterslider:/app/wp-content/plugins/masterslider
+      - ./wordpress/wp-content/plugins/page-scroll-to-id:/app/wp-content/plugins/page-scroll-to-id #Plugins
       - ./wordpress/wp-content/uploads:/app/wp-content/uploads #Uploads
     environment:
-      THEMES: >-
-        [local]qedit
       PLUGINS: >-
         [local]advanced-custom-fields,
         [local]custom-post-type-ui,
         [local]masterslider,
         [local]page-scroll-to-id
+      THEMES: >-
+        [local]qedit
       DB_NAME: qedit
       DB_PASS: root
       ADMIN_EMAIL: admin@qedit.com
