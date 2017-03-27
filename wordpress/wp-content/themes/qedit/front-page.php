@@ -74,7 +74,7 @@ get_header();
 								<div class="image-container">
 									<?php
 										if ( has_post_thumbnail($recent["ID"]) ) {
-							               echo get_the_post_thumbnail($recent["ID"], 'post-thumbnail');
+							               echo get_the_post_thumbnail($recent["ID"], 'latest-post');
 							           }
 									?>
 								</div>

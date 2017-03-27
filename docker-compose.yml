@@ -13,13 +13,15 @@ services:
       - ./wordpress/wp-content/plugins/custom-post-type-ui:/app/wp-content/plugins/custom-post-type-ui
       - ./wordpress/wp-content/plugins/masterslider:/app/wp-content/plugins/masterslider
       - ./wordpress/wp-content/plugins/page-scroll-to-id:/app/wp-content/plugins/page-scroll-to-id #Plugins
+      - ./wordpress/wp-content/plugins/simple-image-sizes:/app/wp-content/plugins/simple-image-sizes
       - ./wordpress/wp-content/uploads:/app/wp-content/uploads #Uploads
     environment:
       PLUGINS: >-
         [local]advanced-custom-fields,
         [local]custom-post-type-ui,
         [local]masterslider,
-        [local]page-scroll-to-id
+        [local]page-scroll-to-id,
+        [local]simple-images-sizes
       THEMES: >-
         [local]qedit
       DB_NAME: qedit
