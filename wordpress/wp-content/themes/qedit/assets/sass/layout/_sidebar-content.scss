@@ -4,9 +4,14 @@
 	width: $size__site-main;
 }
 
+.home {
+	.site-main {
+		background-color: $color__blue;
+	}
+}
+
 .site-main {
 	margin: 0 0 0 $size__site-sidebar;
-	background-color: $color__blue;
 
 	.padded {
 		padding-left: 5.4rem;
