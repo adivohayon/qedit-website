@@ -6044,7 +6044,8 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
-  font-family: 'Open Sans'; }
+  font-family: 'Open Sans';
+  color: #2C2628; }
 
 h1 {
   color: white;
@@ -6053,19 +6054,20 @@ h1 {
 
 h2 {
   font-size: 2.17rem;
-  color: black;
   margin-top: 2.92rem;
   padding-left: 3.6rem; }
 
 h3 {
   font-size: 2rem;
-  color: #2C2628;
   padding-left: 3.92rem; }
 
 h4 {
   font-size: 1.67rem;
-  color: #2C2628;
   padding-left: 3.92rem; }
+
+h5 {
+  font-size: 1.3rem;
+  font-weight: 400; }
 
 p {
   margin-bottom: 1.5em;
