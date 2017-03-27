@@ -48,8 +48,6 @@ get_header();
 					<?php
 						$args = array(
 							'numberposts' => 4,
-							'offset' => 0,
-							'category' => 0,
 							'orderby' => 'post_date',
 							'order' => 'DESC',
 							'include' => '',
@@ -57,18 +55,32 @@ get_header();
 							'meta_key' => '',
 							'meta_value' =>'',
 							'post_type' => 'post',
-							'post_status' => 'draft, publish, future, pending, private',
+							'post_status' => 'publish',
 							'suppress_filters' => true
 						);
 						$recent_posts = wp_get_recent_posts( $args, ARRAY_A );
-						foreach( $recent_posts as $recent ) : 
+						foreach( $recent_posts as $recent ) :
+							setup_postdata($recent);
+							$content= $recent["post_content"];
+							$excerpt = wp_trim_words( 
+								$content, 
+								$num_words = 55, 
+								$more = '<div class="read-more"><a href="' . get_permalink($recent["ID"]) . '">Read More</a></div>' 
+							); 	           
 					?>
 							<!-- HTML stuff -->
 							<div class="col-sm-6 col-xs-12">
 								<h5><?=$recent["post_title"]; ?></h5>
+								<div class="image-container">
+									<?php
+										if ( has_post_thumbnail($recent["ID"]) ) {
+							               echo get_the_post_thumbnail($recent["ID"], 'post-thumbnail');
+							           }
+									?>
+								</div>
+								<?php echo $excerpt; ?>
 							</div>
 							
-							<!-- echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> '; -->
 					<?php
 						endforeach;
 						wp_reset_query();
