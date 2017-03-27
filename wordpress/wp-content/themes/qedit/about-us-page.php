@@ -54,7 +54,7 @@
 						<div class="team-member col-sm-4">
 							<?php 
 								if (has_post_thumbnail( $query->ID ) ):
-							  		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $query->ID ), 'team-member' ); 
+							  		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $query->ID ), 'Team Member' ); 
 							?>
 									<img src="<?php echo $image[0]; ?>" alt="<?php echo $team_member_name; ?>" class="circle">
 								<?php endif; ?>

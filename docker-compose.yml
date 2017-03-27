@@ -23,7 +23,7 @@ services:
         [local]custom-post-type-ui,
         [local]masterslider,
         [local]page-scroll-to-id,
-        [local]simple-custom-post-order
+        [local]simple-custom-post-order,
         [local]simple-image-sizes
       THEMES: >-
         [local]qedit

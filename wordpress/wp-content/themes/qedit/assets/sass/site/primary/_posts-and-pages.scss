@@ -26,3 +26,31 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+.latest-posts {
+	.post-container {
+		width: 60%;
+    	float:left;
+    	padding-left:1rem;
+		.post-details {
+			color:#919191;
+			font-family: 'Open Sans';
+			font-size: 0.9rem;
+		}
+		.description {
+			padding:0;
+		}
+	}
+
+	.image-container {
+		width:40%;
+		float:left;
+	}
+
+	.read-more {
+		a {
+			color:$color__blue;
+		}
+	}
+
+}

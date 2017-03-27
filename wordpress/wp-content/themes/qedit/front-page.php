@@ -45,6 +45,7 @@ get_header();
 				=            Latest Posts            =
 				===================================-->
 				<div class="latest-posts padded">
+					<h2>Latest Posts</h2>
 					<?php
 						$args = array(
 							'numberposts' => 4,
@@ -59,29 +60,38 @@ get_header();
 							'suppress_filters' => true
 						);
 						$recent_posts = wp_get_recent_posts( $args, ARRAY_A );
+						$counter = 0;
 						foreach( $recent_posts as $recent ) :
 							setup_postdata($recent);
 							$content= $recent["post_content"];
 							$excerpt = wp_trim_words( 
 								$content, 
-								$num_words = 55, 
+								$num_words = 20, 
 								$more = '<div class="read-more"><a href="' . get_permalink($recent["ID"]) . '">Read More</a></div>' 
-							); 	           
+							);
+							if ($counter % 2 === 0) echo '<div class="row">'; 	           
 					?>
 							<!-- HTML stuff -->
 							<div class="col-sm-6 col-xs-12">
-								<h5><?=$recent["post_title"]; ?></h5>
 								<div class="image-container">
 									<?php
 										if ( has_post_thumbnail($recent["ID"]) ) {
-							               echo get_the_post_thumbnail($recent["ID"], 'latest-post');
+							               echo get_the_post_thumbnail($recent["ID"], 'Latest Posts');
 							           }
 									?>
 								</div>
-								<?php echo $excerpt; ?>
+								<div class="post-container">
+									<h5><?=$recent["post_title"]; ?></h5>
+									<div class="post-details">
+										<?=get_the_date();?> by <?=get_the_author();?>
+									</div>
+									<p class="description"><?php echo $excerpt; ?></p>
+								</div>
 							</div>
 							
 					<?php
+							$counter++;
+							if ($counter % 2 === 0) echo '</div>';
 						endforeach;
 						wp_reset_query();
 					?>
