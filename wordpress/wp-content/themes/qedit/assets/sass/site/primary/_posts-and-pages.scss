@@ -28,6 +28,8 @@
 }
 
 .latest-posts {
+	background-color: white;
+    padding-top: 2rem;
 	.post-container {
 		width: 60%;
     	float:left;
@@ -53,4 +55,33 @@
 		}
 	}
 
+}
+
+#contact-us {
+	background-color: $color__blue;
+	div.row > div {
+		text-align: center;
+	}
+	h2 {
+		color:white;
+		margin-bottom: 4rem;
+	}
+	.logo-container {
+		width:40%;
+		float:left;
+	}
+	.contact-us-container {
+		width:60%;
+		float:left;
+		a {
+			color: white;
+		    font-size: 1.6rem;
+		    font-family: 'Open Sans';
+		    font-weight: 500;
+		    text-decoration: underline;
+		}
+		p {
+			color:white;
+		}
+	}
 }

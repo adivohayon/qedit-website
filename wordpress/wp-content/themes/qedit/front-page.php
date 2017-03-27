@@ -60,6 +60,7 @@ get_header();
 							'suppress_filters' => true
 						);
 						$recent_posts = wp_get_recent_posts( $args, ARRAY_A );
+						$number_of_posts = count($recent_posts);
 						$counter = 0;
 						foreach( $recent_posts as $recent ) :
 							setup_postdata($recent);
@@ -91,7 +92,9 @@ get_header();
 							
 					<?php
 							$counter++;
-							if ($counter % 2 === 0) echo '</div>';
+							if ($counter % 2 === 0 || $counter === $number_of_posts) {
+								echo '</div>';
+							}
 						endforeach;
 						wp_reset_query();
 					?>
@@ -103,7 +106,21 @@ get_header();
 				=            Contact Us            =
 				=================================-->
 				<div id="contact-us" class="padded">
-					Contact Us
+					<h2>Contact Us</h2>
+					<div class="row">
+						<div class="col-sm-6 col-xs-12">
+							<div class="logo-container">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/qedit-logo-square-white.png"/>
+							</div>
+							<div class="contact-us-container">
+								<a href="#">info@qedit.com</a>
+								<p>Mindspace, Ehad Ha’am  20<br>2028TLV, Israel</p>
+							</div>
+						</div>
+						<div class="col-sm-6 col-xs-12">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/quod-erat-demonstrandum.png"/>
+						</div>
+					</div>
 				</div>
 				<!-- /#contact-us -->
 			</main><!-- #main -->

@@ -6,9 +6,11 @@
 
 .site-main {
 	margin: 0 0 0 $size__site-sidebar;
+	background-color: $color__blue;
 
 	.padded {
-		padding: 0 5.4rem;
+		padding-left: 5.4rem;
+		padding-right: 5.4rem;
 	}
 }
 
