@@ -44,7 +44,8 @@ function qedit_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'qedit' ),
+		'front-page' => esc_html__( 'Front Page', 'qedit' ),
+		'other-pages' => esc_html__( 'Other Pages', 'qedit' )
 	) );
 
 	/*

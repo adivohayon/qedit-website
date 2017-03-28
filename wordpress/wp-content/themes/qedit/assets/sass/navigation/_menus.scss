@@ -103,13 +103,13 @@
 
 		// ul .current-menu-item a:before, li a:hover:before, 
 
-		.active:before, .current:before {
+		.current-menu-item a:before, .active:before, .current:before {
 			font-family: 'FontAwesome';
 		    content: "\f0da";
-		    font-size: 1.8rem;
+		    font-size: 1.4rem;
 		    position: absolute;
 		    left: -1.5rem;
-		    bottom: 0.1rem;
+		    bottom: 0;
 		}
 		.active, .current {
 			font-weight: 300;
@@ -118,7 +118,7 @@
 			font-weight: 300;
 		}
 	}
-}
+} 
 
 .comment-navigation,
 .posts-navigation,
