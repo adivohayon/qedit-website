@@ -25,9 +25,7 @@
 		}
 	}
 
-	.master-slider-parent {
-		top: -30rem;
-	}
+	
 
 	h1 {
 		color:#ffffff;
@@ -42,4 +40,8 @@
 		line-height:2.5rem;
 		font-weight:300;
 	}
+}
+ 
+#home .master-slider-parent {
+	top: -30rem;
 }

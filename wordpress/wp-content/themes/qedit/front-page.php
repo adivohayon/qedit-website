@@ -42,8 +42,17 @@ get_header();
 				=============================-->
 				<div id="prover">
 					<h2 class="padded">Our Technology</h2>
-					<div class="slider-container">
-						<?php masterslider(1); ?>
+					<div class="row">
+						<div class="col-sm-8 col-xs-12">
+							<div class="slider-container">
+								<?php masterslider('prover'); ?>
+							</div>
+						</div>
+						<div class="col-sm-4 col-xs-12">
+							<video autoplay loop> 
+							   <source src="<?php echo get_template_directory_uri(); ?>/assets/videos/audit-trail.mp4" type="video/mp4" > 
+							</video>
+						</div>
 					</div>
 				</div>
 				<!-- /#prover -->
