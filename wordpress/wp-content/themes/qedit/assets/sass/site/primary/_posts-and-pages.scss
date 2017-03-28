@@ -22,7 +22,7 @@
 	margin: 1.5em 0 0;
 }
 
-article.post {
+article.post, article.jobs {
 	&.light-gray-bg {
 		background-color: #f2f2f2;
 	}
@@ -31,6 +31,7 @@ article.post {
 	.post-content {
 		padding:1rem;
 	}
+	p {margin-bottom:0.5rem;}
 }
 .page-links {
 	clear: both;
@@ -40,6 +41,7 @@ article.post {
 .latest-posts {
 	background-color: white;
     padding-top: 2rem;
+    h2 {margin-bottom:3rem}
 	.post-container {
 		width: 60%;
     	float:left;
@@ -51,6 +53,7 @@ article.post {
 		}
 		.description {
 			padding:0;
+			margin-bottom:0.5rem;
 		}
 	}
 
@@ -58,15 +61,17 @@ article.post {
 		width:16rem;
 		float:left;
 	}
-
-	.read-more {
-		a {
-			color:$color__blue;
-		}
+}
+.read-more {
+	a {
+		color:$color__blue;
 	}
-
 }
 
+#prover {
+	margin-top:6rem;
+	h2 {color:#ffffff;}
+}
 #contact-us {
 	background-color: $color__blue;
 	padding-bottom: 2rem;
