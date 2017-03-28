@@ -22,7 +22,7 @@ Thumbs.db
 !/wordpress/wp-content/themes/qedit
 
 /wordpress/wp-content/uploads
-/wordpress/wp-content/plugins/*
+
 /wordpress/wp-content/themes/qedit/rev-manifest.json
 /data/db.sql
 /wordpress/wp-content/themes/qedit/css/style.css

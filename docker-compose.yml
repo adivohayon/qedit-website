@@ -8,14 +8,13 @@ services:
       - 443:443
     volumes:
       - ./data:/data
-      - ./wordpress/wp-content/themes/qedit:/app/wp-content/themes/qedit #theme
-      - ./wordpress/wp-content/plugins/advanced-custom-fields:/app/wp-content/plugins/advanced-custom-fields
-      - ./wordpress/wp-content/plugins/custom-post-type-ui:/app/wp-content/plugins/custom-post-type-ui
-      - ./wordpress/wp-content/plugins/masterslider:/app/wp-content/plugins/masterslider
-      - ./wordpress/wp-content/plugins/page-scroll-to-id:/app/wp-content/plugins/page-scroll-to-id
-      - ./wordpress/wp-content/plugins/simple-custom-post-order:/app/wp-content/plugins/simple-custom-post-order #Plugins
-      - ./wordpress/wp-content/plugins/simple-image-sizes:/app/wp-content/plugins/simple-image-sizes
-
+      - ./wordpress/wp-content/themes/qedit:/app/wp-content/themes/qedit #Theme
+      - ./wordpress/wp-content/plugins/advanced-custom-fields:/app/wp-content/plugins/advanced-custom-fields #Plugin
+      - ./wordpress/wp-content/plugins/custom-post-type-ui:/app/wp-content/plugins/custom-post-type-ui #Plugin
+      - ./wordpress/wp-content/plugins/masterslider:/app/wp-content/plugins/masterslider #Plugin
+      - ./wordpress/wp-content/plugins/page-scroll-to-id:/app/wp-content/plugins/page-scroll-to-id #Plugin
+      - ./wordpress/wp-content/plugins/simple-custom-post-order:/app/wp-content/plugins/simple-custom-post-order #Plugin
+      - ./wordpress/wp-content/plugins/simple-image-sizes:/app/wp-content/plugins/simple-image-sizes #Plugin
       - ./wordpress/wp-content/uploads:/app/wp-content/uploads #Uploads
     environment:
       PLUGINS: >-

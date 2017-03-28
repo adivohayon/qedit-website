@@ -4,7 +4,9 @@
   "scripts": {
     "db:backup": "docker exec server /bin/bash -c \"sudo -u www-data wp db export /data/db.sql --allow-root \"",
     "db:restore": "docker exec server /bin/bash -c  \"wp db import /data/db.sql --allow-root\"",
-    "ssh:server": "docker exec -i -t server /bin/bash"
+    "ssh:server": "docker exec -i -t server /bin/bash",
+    "sass:compile": "sass wordpress/wp-content/themes/qedit/assets/sass/style.scss wordpress/wp-content/themes/qedit/css/style.css",
+    "sass:watch": "sass --watch wordpress/wp-content/themes/qedit/assets/sass:wordpress/wp-content/themes/qedit/css"
   },
   "dependencies": {},
   "devDependencies": {
