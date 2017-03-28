@@ -8,9 +8,11 @@
 3. Set file premissions if necessary  
 `sudo chmod -R 777 wordpress/wp-content/uploads`  
 `sudo chmod -R 777 data`  
-5. run `docker-compose up`
+5. Compile Sass: `npm run sass:compile`  
+  *Requires Sass to be installed
+6. run `docker-compose up`  
 
-##Web Access
+## Web Access
 * Website: `<docker-machine-ip>:8080`  
 * Wordpress Dashboard: `<docker-machine-ip>:8080/wp-admin`
 * Username: `admin`
@@ -33,7 +35,7 @@ SQL File: `data/db.sql`
 * Backup file should be restored upon container start  
 
 
-##Production  
+## Production  
 1. Change `Other Pages Menu` custom links URL for `Prover` & `Contact Us`
 2. Reset permissions to 755
 
