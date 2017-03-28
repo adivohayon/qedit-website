@@ -1,16 +1,28 @@
 .slider-container {
-	height:30rem;
-	overflow:hidden;
-	position:relative;
-	video.background-video {
-		width: 100%;
-		position: absolute;
+	height: 37rem;
+	.background-video {
+		height: 30rem;
+		overflow: hidden;
+		position:relative;
+		video {
+			width: 100%;
+		}
+		.overlay {
+			height: 100%;
+			width: 100%;
+			background-color: rgba(0,0,0,0.56);
+			position: absolute;
+			top: 0;
+		}
 	}
-	.overlay {
-		height: 100%;
-		width: 100%;
-		background-color: rgba(0,0,0,0.56);
-		position: relative;
+	
+	// Icons
+	.ms-thumbs-cont {
+		left:7%!important;
+		.ms-thumb-frame {
+			opacity:0.7;
+			&-selected {opacity:1;}
+		}
 	}
 
 	.master-slider-parent {
