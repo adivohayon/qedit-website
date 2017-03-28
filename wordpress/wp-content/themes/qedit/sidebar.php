@@ -15,7 +15,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 <aside id="sidebar"  role="complementary">
 
 	<div id="logo">
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/qedit-logo.png" alt="Qedit Logo">	
+		<a href="<?=home_url()?>" title="QEDit - <?=get_bloginfo('description')?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/qedit-logo.png" alt="Qedit Logo"></a>	
 	</div>
 	<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'qedit' ); ?></button>
