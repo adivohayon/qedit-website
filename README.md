@@ -8,9 +8,11 @@
 3. Set file premissions if necessary  
 `sudo chmod -R 777 wordpress/wp-content/uploads`  
 `sudo chmod -R 777 data`  
-5. run `docker-compose up`
+5. Compile Sass: `npm run sass:compile`  
+  *Requires Sass to be installed
+6. run `docker-compose up`  
 
-##Web Access
+## Web Access
 * Website: `<docker-machine-ip>:8080`  
 * Wordpress Dashboard: `<docker-machine-ip>:8080/wp-admin`
 * Username: `admin`
