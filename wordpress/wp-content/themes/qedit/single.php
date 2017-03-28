@@ -11,6 +11,15 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+		<header class="entry-header">
+			<h1><?php
+				if (get_post_type() !== 'post') {
+					echo get_post_type() . ': ';
+				}
+				single_post_title();
+			?></h1>
+
+		</header><!-- .entry-header -->
 		<?php
 		while ( have_posts() ) : the_post();
 

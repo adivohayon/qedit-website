@@ -16,11 +16,16 @@
 	}
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class($post_classes); ?> >
-	<div class="col-sm-3 col-xs-12 image-container">
-		<?php
-			the_post_thumbnail( 'Latest Posts' );  
-		?>
-	</div>
+	<!--================================
+	=            Post Image            =
+	=================================-->
+	<?php
+		if (has_post_thumbnail()) {
+			echo '<div class="col-sm-3 col-xs-12 image-container">';
+				the_post_thumbnail( 'Latest Posts' ); 
+			echo '</div>';
+		}
+	?>
 	<div class="col-sm-9 col-xs-12 post-content">
 		<header>
 			<?php
