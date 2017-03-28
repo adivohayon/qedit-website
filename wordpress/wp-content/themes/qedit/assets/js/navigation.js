@@ -4,7 +4,7 @@
  * Handles toggling the navigation menu for small screens and enables TAB key
  * navigation support for dropdown menus.
  */
-( function() {
+( function($) {
 	var container, button, menu, links, i, len;
 
 	container = document.getElementById( 'site-navigation' );
@@ -44,19 +44,52 @@
 
 	// Get all the link elements within the menu.
 	links    = menu.getElementsByTagName( 'a' );
+	console.log('links', links);
 
 	// Each time a menu link is focused or blurred, toggle focus.
 	for ( i = 0, len = links.length; i < len; i++ ) {
 		links[i].addEventListener( 'focus', toggleFocus, true );
 		links[i].addEventListener( 'blur', toggleFocus, true );
 	}
+	var currentItem = $('.nav-menu .current');
+	$('.nav-menu .current').addClass('aaa');
+	console.log('currentItem',currentItem);
+	var menuLinksSelector = '.nav-menu li a';
+	// $(menuLinksSelector).hover(
+	// 	function() {
+	// 	//on mousenter
+	// 		var $this = $(this);
+	// 		//if we're hovering over current - do nothing
 
+	// 		//if not
+	// 		if (!$this.hasClass('current')) {
+	// 			//remove all .active classes
+	// 			$(menuLinksSelector).removeClass('active');
+	// 			//set .active to $this
+	// 			$this.addClass('active');
+	// 		}
+	// 	},
+	// 	function() {
+	// 	//on mouseout
+	// 		var $this = $(this);
+	// 		//if we hovered on current  - do nothing
+
+	// 		//if not
+	// 		if (!$this.hasClass('current')) {
+	// 			//remove all .active classes
+	// 			$(menuLinksSelector).removeClass('active');
+	// 			//set .active to .current
+	// 			$(menuLinksSelector + '.current').addClass('active');
+				
+	// 		}
+	// 	}
+	// );
 	/**
 	 * Sets or removes .focus class on an element.
 	 */
 	function toggleFocus() {
 		var self = this;
-
+		console.log(self);
 		// Move up through the ancestors of the current link until we hit .nav-menu.
 		while ( -1 === self.className.indexOf( 'nav-menu' ) ) {
 
@@ -103,4 +136,4 @@
 			}
 		}
 	}( container ) );
-} )();
+} )(jQuery);

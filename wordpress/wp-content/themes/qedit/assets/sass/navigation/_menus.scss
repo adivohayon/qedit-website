@@ -101,7 +101,9 @@
 	    	}
 		}
 
-		ul .current-menu-item a:before, li a:hover:before, .active:before {
+		// ul .current-menu-item a:before, li a:hover:before, 
+
+		.active:before, .current:before {
 			font-family: 'FontAwesome';
 		    content: "\f0da";
 		    font-size: 1.8rem;
@@ -109,7 +111,7 @@
 		    left: -1.5rem;
 		    bottom: 0.1rem;
 		}
-		.active {
+		.active, .current {
 			font-weight: 300;
 		}
 		.current-menu-item a {

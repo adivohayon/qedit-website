@@ -108,6 +108,11 @@ function qedit_scripts() {
 	//Uncomment when going to production
 	//wp_enqueue_style( 'qedit-style', get_stylesheet_uri() );
 
+	//jQuery
+	wp_deregister_script( 'jquery' );
+	$jquery_cdn = '//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js';
+	wp_enqueue_script( 'jquery', $jquery_cdn, array(), '2.2.4', true );
+
 
 	wp_enqueue_style( 'qedit-style', get_template_directory_uri() . '/css/style.css' );
 
@@ -118,6 +123,7 @@ function qedit_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
 }
 add_action( 'wp_enqueue_scripts', 'qedit_scripts' );
 
